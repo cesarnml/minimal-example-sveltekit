@@ -16,19 +16,16 @@
 	let email: string
 	let message: string
 	let buttonDisabled = false
-	let showProgress = false
 
 	function resetForm() {
 		name = ''
 		email = ''
 		message = ''
 		buttonDisabled = false
-		showProgress = false
 	}
 
 	onMount(async () => {
 		sendEmail = async () => {
-			showProgress = true
 			buttonDisabled = true
 			try {
 				await Email.send({
