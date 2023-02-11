@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ContactForm from '$lib/components/ContactForm.svelte'
+	import { page } from '$app/stores'
 </script>
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<ContactForm />
+<div>Current url: {$page.url}</div>
